@@ -27,11 +27,10 @@ export default function Code() {
                     onChange={(e) => {
                         setPinCode(e.target.value);
                     }} />
-                <button onClick={() => getData()} className=' bg-emerald-400 py-0 m-3 px-2 text-black rounded-md active:opacity-70 hover:bg-yellow-500 hover:text-white'>Submit</button>
+                <button onClick={() => getData()} className=' bg-yellow-500 py-0 m-3 px-2 text-black rounded-md active:opacity-70 hover:text-white'>Submit</button>
             </div>
-            <Location error={error} data={data} setData={setData} />
             {isLoading ? <div className='loader'></div> : ""}
-
+            <Location error={error} data={data} setData={setData} />
         </div>
     )
 }
