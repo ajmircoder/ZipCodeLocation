@@ -20,10 +20,11 @@ export default function Code() {
             })
     }
     return (
-        <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl rounded-md'>
+        <div className='body p-10 lg:p-40'>
+        <div className='text-center bg-gray-600 text-white p-4 text-3xl rounded-md '>
             <h1>Please enter Zip Code</h1>
             <div>
-                <input className='text-black px-1' type="text"
+                <input className='text-black px-1 w-full md:w-2/4 xl:w-1/4 ' type="text"
                     onChange={(e) => {
                         setPinCode(e.target.value);
                     }} />
@@ -31,6 +32,7 @@ export default function Code() {
             </div>
             {isLoading ? <div className='loader'></div> : ""}
             <Location error={error} data={data} setData={setData} />
+        </div>
         </div>
     )
 }
